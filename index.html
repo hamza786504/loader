@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Title</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+
 </head>
+<style>
+    .main-loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(https://freight.cargo.site/t/original/i/Z1854158983164081732756781140939/SP_Logo_Lockup_Horizontal_OffWhite.svg) center no-repeat white;
+        background-size: 350px;
+        background-color: #ef56;
+    }
+</style>
+
 <body>
 
-<div class="main-loader"></div>
+    <div class="main-loader"></div>
 
-<!-- Your content goes here -->
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
-<script src="script.js"></script> <!-- Your JavaScript file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
+    <script>
+        $(window).on('load', function () {
+            $('.main-loader').delay(3000).fadeOut(1000);
+        });
+    </script>
 
 </body>
+
 </html>
